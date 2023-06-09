@@ -68,12 +68,14 @@
 		{#each posts as item}
 			<article class="box_small">
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<img
-					src={DeleteLogo}
-					class="img_pos"
-					alt="delete"
-					on:click={() => updateData(item.title)}
-				/>
+				<div>
+					<img
+						src={DeleteLogo}
+						class="img_pos"
+						alt="delete"
+						on:click={() => updateData(item.title)}
+					/>
+				</div>
 				<h4>{item.title}</h4>
 				<div class="small_box">
 					{item.content}
@@ -89,7 +91,6 @@
 		border: 2px solid rgb(130, 127, 127);
 		border-radius: 6px;
 		padding: 20px 25px;
-		background: rgb(240, 250, 254);
 		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 	}
 	button {
@@ -98,13 +99,16 @@
 	}
 	label {
 		font-weight: bold;
+		color: rgb(18, 198, 253);
 	}
 	.outline:hover {
-		background: rgb(38, 141, 251);
+		background: rgba(18, 198, 253, 0.888);
 		color: white;
 	}
 	input {
 		height: 2.6rem;
+		border: 1px solid rgba(12, 240, 122, 0.767);
+		background: #5c575721;
 	}
 	.warning {
 		color: rgb(250, 34, 34);
@@ -129,6 +133,9 @@
 		box-shadow: 6px 6px rgba(0, 14, 40, 0.895);
 		transition: all 0.3s ease;
 		transform: translate(-7px, -7px) !important;
+	}
+	.small_box {
+		color: rgb(37, 34, 34);
 	}
 	.box_small h4 {
 		margin: 5px 0;
