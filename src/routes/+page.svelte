@@ -148,4 +148,9 @@
 		top: 5px;
 		right: 5px;
 	}
+	@media (max-width: 768px) {
+		form {
+			width: 100%;
+		}
+	}
 </style>
